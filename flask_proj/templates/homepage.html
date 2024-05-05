@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandria University</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Alexandria University</h1>
+            <p>Faculty of Computers and Data Science</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="welcome">
+                <h2>Welcome to our Support System</h2>
+                <p>We are here to help you.</p>
+            </section>
+
+            <section id="login">
+                <h2>Admin Login</h2>
+                <form class="loginform" action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" id="id" name="id" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </section>
+
+            <section id="gallery">
+                <h2>We are here to help !</h2>
+                <div class="image-gallery">
+                    <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Image 1">
+                    <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Image 2">
+                    <img src="{{ url_for('static', filename='img3.jpg') }}" alt="Image 3">
+                </div>
+            </section>
+
+            <section id="testimonial">
+                <h2>How Can We Help?</h2>
+                <div class="testimonial">
+                    <ul>
+                        <li>Personalized Academic Advising</li>
+                        <li>Supportive and Engaging Faculty</li>
+                        <li>Strong Career Planning</li>
+                        <li>Mentorship Programs</li>
+                        <li>Clubs, Organizations, and Connections</li>
+                        <li>Supportive Disability Services</li>
+                        <li>Student Counseling Services</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alexandria University</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

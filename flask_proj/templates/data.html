@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandria University</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='data.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Alexandria University</h1>
+            <p>Faculty of Computers and Data Science</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="table-container">
+            <table class="beautiful-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>CGPA</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student[0] }}</td> <!-- ID -->
+                        <td>{{ student[1] }}</td> <!-- Name -->
+                        <td>{{ student[2] }}</td> <!-- Age -->
+                        <td>{{ student[3] }}</td> <!-- CGPA -->
+                        <td>{{ student[4] }}</td> <!-- Department -->
+                        <td>{{ student[5] }}</td> <!-- Phone -->
+                        <td>{{ student[6] }}</td> <!-- Email -->
+                        <td>{{ student[7] }}</td> <!-- Address -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alexandria University</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
